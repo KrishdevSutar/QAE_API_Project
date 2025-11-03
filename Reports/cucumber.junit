@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="3.615" tests="8" skipped="0" failures="0" errors="0">
+<testcase classname="Test that the API Testing is functioning" name="User should be able to get the list of all the foods so that I can see the ID, Name, and Price of the foods" time="2.024">
+<system-out><![CDATA[
+Given User access the "foods" extension of the API endpoint.................passed
+When User sends a GET request to the endpoint...............................passed
+Then User should fill up the list of food items.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test that the API Testing is functioning" name="User should make a new food item so that I can see whether the new food item has been created or not - Example #1.1" time="0.663">
+<system-out><![CDATA[
+Given User access the "foods" extension of the API endpoint.................passed
+Given User sends the 5, "apple", and 7.8 of the food........................passed
+When User sends a POST request to the endpoint..............................passed
+Then User should get response status 201....................................passed
+And User should create a new food in the JSON with same 5 and "apple".......passed
+]]></system-out>
+</testcase>
+<testcase classname="Test that the API Testing is functioning" name="User should update the price of the food item based on the food id so that I can see the price is changing at the end - Example #1.1" time="0.082">
+<system-out><![CDATA[
+Given User access the "foods" extension of the API endpoint.................passed
+Given User sends the 3 and 9 of the food....................................passed
+When User sends a PUT request for 3 to the endpoint.........................passed
+Then User should update the food 3 in the JSON to the correct 9.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Test that the second portion API Testing is functioning" name="User should create a new comment with foodId so that I can see whether the new comment has been created - Example #1.1" time="0.07">
+<system-out><![CDATA[
+Given User access the "comments" portion of the API endpoint................passed
+Given User sends the 6 and 5, 10, and "spectacular" of the comment..........passed
+When User sends a POST request to the Comment endpoint......................passed
+Then User should get response status 201 for comment being made.............passed
+And User should create a new comment in the JSON with same 5, 6 and "spectacular".passed
+]]></system-out>
+</testcase>
+<testcase classname="Test that the second portion API Testing is functioning" name="User should be able to delete the comment according to the comment’s id so that the body of the comment should not be visible anymore - Example #1.1" time="0.165">
+<system-out><![CDATA[
+Given User access the "comments" portion of the API endpoint................passed
+When User sends a Delete request to the endpoint with ID 4..................passed
+Then User should not be see the comment with ID 4...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test that the second portion API Testing is functioning" name="User should be  able to get the comment information based on the user id and the food id so that I can very whether the body of the message is correct or not - Example #1.1" time="0.044">
+<system-out><![CDATA[
+Given User access the "comments" portion of the API endpoint................passed
+When User sends a GET request with foodid 3 to the Comment endpoint.........passed
+And User sends a GET request with userid 3 to the Comment endpoint..........passed
+Then User should have the same "delicious" as two requests..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test that the second portion API Testing is functioning" name="Update the list of staffs under a manager" time="0.074">
+<system-out><![CDATA[
+Given User access the "managers" section of the API endpoint................passed
+Given the manager with id 2 exists..........................................passed
+And User sends the staff 3, "bob", and 500 of the new staff.................passed
+When I update the list of staffs for manager with id 2......................passed
+Then all the staff information under manager with id 2 should be updated....passed
+]]></system-out>
+</testcase>
+<testcase classname="Test that the second portion API Testing is functioning" name="Delete a staff under a manager" time="0.149">
+<system-out><![CDATA[
+Given User access the "managers" section of the API endpoint................passed
+Given the manager "Bell Pepper" and staff id 1 exists.......................passed
+When I delete the staff with id 1 under manager "Bell Pepper"...............passed
+Then the number of staffs managed by manager 2..............................passed
+]]></system-out>
+</testcase>
+</testsuite>
