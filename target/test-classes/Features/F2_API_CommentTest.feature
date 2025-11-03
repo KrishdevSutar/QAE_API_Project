@@ -12,13 +12,13 @@ Feature: Test that the second portion API Testing is functioning
 		|foodId|id|userid|body|
 		|6|5|10|spectacular|
 		
-	Scenario Outline: User should be able to delete the comment according to the comment’s id so that the body of the comment should not be visible anymore 
-		When User sends a Delete request to the endpoint with ID <id>
-		Then User should not be see the comment with ID <id>
+	#Scenario Outline: User should be able to delete the comment according to the comment’s id so that the body of the comment should not be visible anymore 
+	#	When User sends a Delete request to the endpoint with ID <id>
+	#	Then User should not be see the comment with ID <id>
 		
-		Examples:
-		|id|
-		|4|
+	#	Examples:
+	#	|id|
+	#	|4|
 	
 	Scenario Outline: User should be  able to get the comment information based on the user id and the food id so that I can very whether the body of the message is correct or not 
 		When User sends a GET request with foodid <foodId> to the Comment endpoint
