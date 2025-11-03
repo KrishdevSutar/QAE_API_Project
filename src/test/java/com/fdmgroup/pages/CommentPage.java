@@ -42,6 +42,7 @@ public class CommentPage {
 				.body(comm)
 				.when()
 				.post(this.url);
+		
 	}
 	
 	public void checkResponseCode(int code) {
